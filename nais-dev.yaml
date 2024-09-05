@@ -1,0 +1,18 @@
+apiVersion: nais.io/v1
+kind: Naisjob
+metadata:
+  name: dvh-flr-import-2
+  namespace: disykefravar
+  labels:
+    team: disykefravar
+spec:
+  image: {{ image }}
+  schedule: "*/5 * * * *"
+  resources:
+    requests:
+      cpu: 400m
+      memory: 512Mi
+    limits:
+      cpu: 600m
+      memory: 1Gi
+  restartPolicy: Never
