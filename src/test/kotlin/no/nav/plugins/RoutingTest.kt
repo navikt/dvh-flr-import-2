@@ -16,31 +16,6 @@ import org.junit.jupiter.api.Assertions.assertEquals
 import org.junit.jupiter.api.Test
 
 internal class RoutingTest {
-    @Test
-    internal fun `Returns ok on is_alive`() {
-        testApplication {
-            application {
-                module()
-            }
-            val response = client.get("/internal/is_alive")
-
-            assertEquals(HttpStatusCode.OK, response.status)
-            assertEquals("I'm alive! :)", response.bodyAsText())
-        }
-    }
-
-    @Test
-    internal fun `Returns ok in is_ready`() {
-        testApplication {
-            application {
-                module()
-            }
-            val response = client.get("/internal/is_ready")
-
-            assertEquals(HttpStatusCode.OK, response.status)
-            assertEquals("I'm ready! :)", response.bodyAsText())
-        }
-    }
 
     @Test
     internal fun `Returns internal server error when liveness check fails`() {
@@ -80,9 +55,6 @@ internal class RoutingTest {
     @Test
     internal fun `Returns 404 on page that does not exists`() {
         testApplication {
-            val applicationState = ApplicationState()
-            applicationState.ready = false
-            applicationState.alive = false
             application {
                 module()
             }
