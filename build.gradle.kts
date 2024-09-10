@@ -1,7 +1,7 @@
 import org.jetbrains.kotlin.gradle.dsl.JvmTarget
 
 val ktorVersion = "2.3.12"
-val logbackVersion = "1.4.14"
+val logbackVersion = "1.5.8"
 val prometheusVersion = "0.16.0"
 val logstashEncoderVersion = "8.0"
 val junitJupiterVersion = "5.10.2"
