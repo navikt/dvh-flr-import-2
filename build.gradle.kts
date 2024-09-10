@@ -4,7 +4,7 @@ val ktorVersion = "2.3.12"
 val logbackVersion = "1.4.14"
 val prometheusVersion = "0.16.0"
 val logstashEncoderVersion = "8.0"
-val junitJupiterVersion = "5.10.2"
+val junitJupiterVersion = "5.11.0"
 val javaVersion = JvmTarget.JVM_21
 
 // override dependencies
