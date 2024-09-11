@@ -13,7 +13,7 @@ val commonsCodecVersion = "1.17.1"
 plugins {
     kotlin("jvm") version "2.0.20"
     id("application")
-    id("com.gradleup.shadow") version "8.3.0"
+    id("com.gradleup.shadow") version "8.3.1"
 }
 
 group = "no.nav"
